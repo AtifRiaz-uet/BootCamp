@@ -7,56 +7,47 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Calculator_Application
+namespace Calculator
 {
 
 
-    public partial class Page2
+    public partial class WebForm1
     {
 
         /// <summary>
-        /// form2 control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Span1 control.
+        /// x control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Span1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText x;
 
         /// <summary>
-        /// Span2 control.
+        /// y control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Span2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText y;
 
         /// <summary>
-        /// Span3 control.
+        /// Oper control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Span3;
-
-        /// <summary>
-        /// Answer_page control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Answer_page;
+        protected global::System.Web.UI.WebControls.DropDownList Oper;
     }
 }
