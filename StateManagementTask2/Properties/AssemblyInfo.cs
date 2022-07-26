@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ViewState_WebApp")]
+[assembly: AssemblyTitle("StateManagementTask2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ViewState_WebApp")]
+[assembly: AssemblyProduct("StateManagementTask2")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("337c96b5-847f-4107-860a-ffeb05044124")]
+[assembly: Guid("f5e88664-49bb-47d0-a862-b9f56eef3a66")]
 
 // Version information for an assembly consists of the following four values:
 //
