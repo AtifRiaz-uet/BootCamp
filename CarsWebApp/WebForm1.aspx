@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="CarStyleSheet.css" rel="stylesheet" />
     <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" /
          rel = "stylesheet">
       <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -12,9 +13,11 @@
 <body>
     <form id="form1" runat="server">
         <div class="container text-center d-flex pt-5">
-         <div class="form-control ">
-             <label for="input">Enter Car Name</label>
-            <input type="text" id="input" class="form-group" />
+         <div class="form-control " >
+             <div class="center">
+                <label for="input">Enter Car Name</label>
+                <input type="text" id="input" class="form-group" />
+            </div>
         </div>
             </div>
 
