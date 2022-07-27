@@ -61,5 +61,10 @@ namespace GridViewTask2
             EmpData.EditIndex = -1;
             EmpData.DataBind();
         }
+
+        protected void Search_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

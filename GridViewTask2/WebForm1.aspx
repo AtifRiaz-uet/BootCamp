@@ -9,7 +9,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
+
         <div class="center">
+            <asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
+            <asp:Button Text="Search" runat="server" OnClick="Search_Click"/>
+            <hr />
             <asp:GridView runat="server" ID="EmpData" AllowPaging="true" PageSize="15" OnPageIndexChanging="PageChanging"
                  CellPadding="5" CellSpacing="50" BorderColor="BlueViolet" GridLines="Horizontal" Font-Size="Larger" 
                 EnableSortingAndPagingCallbacks="True" AutoGenerateColumns="false" OnRowEditing="EmpData_RowEditing" OnRowDeleting="EmpData_RowDeleting">
