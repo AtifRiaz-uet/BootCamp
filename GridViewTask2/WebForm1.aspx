@@ -14,9 +14,9 @@
             <asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
             <asp:Button Text="Search" runat="server" OnClick="Search_Click"/>
             <hr />
-            <asp:GridView runat="server" ID="EmpData" AllowPaging="true" PageSize="15" OnPageIndexChanging="PageChanging"
+            <asp:GridView runat="server" ID="EmpData" AllowPaging="true" PageSize="15" OnPageIndexChanging="EmpData_PageIndexChanging"
                  CellPadding="5" CellSpacing="50" BorderColor="BlueViolet" GridLines="Horizontal" Font-Size="Larger" 
-                EnableSortingAndPagingCallbacks="True" AutoGenerateColumns="false" OnRowEditing="EmpData_RowEditing" OnRowDeleting="EmpData_RowDeleting">
+                 AutoGenerateColumns="false" OnRowEditing="EmpData_RowEditing" OnRowDeleting="EmpData_RowDeleting">
                 <AlternatingRowStyle BackColor="#F7F7F7" />
 
                 <HeaderStyle Width="25%" />

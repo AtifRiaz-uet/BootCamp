@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GridViewTask2;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,44 +12,31 @@ namespace GridViewTask2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                List<Employee> dataList = new Employee().GetEmpList();
+                Session["data"] = dataList;
+                BindGrid();
+            }
+            
 
-            EmpData.DataSource = new Employee().GetEmpList();
+        }
+
+        public void BindGrid()
+        {
+            EmpData.DataSource = Session["data"] as List<Employee>;
             EmpData.DataBind();
         }
 
-        public class Employee
+        protected void EmpData_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            public string Id { get; set; }
-            public string Name { get; set; }
-            public string Role { get; set; }
-            public string Salary { get; set; }
-            public List<Employee> GetEmpList()
-
-            {
-
-                List<Employee> EmpList = new List<Employee>();
-                //Employee EmpObj = new Employee();
-
-                for (int num =1; num < 1001; num++)
-                {
-                    Employee EmpObj = new Employee();
-                    EmpObj.Id = "10" + Convert.ToString(num);
-                    EmpObj.Name = "Name" + Convert.ToString(num);
-                    EmpObj.Role = "Engineer";
-                    EmpObj.Salary = "100$";
-                    EmpList.Add(EmpObj);
-                }
-
-                return EmpList;
-
-            }
-           
-        }
-        protected void PageChanging(object sender, GridViewPageEventArgs e)
-        {
-
+            
             EmpData.PageIndex = e.NewPageIndex;
+            Session["newpage"] = EmpData.PageIndex;
+            BindGrid();
         }
+
+
 
         protected void EmpData_RowEditing(object sender, GridViewEditEventArgs e)
         {
@@ -58,13 +46,18 @@ namespace GridViewTask2
 
         protected void EmpData_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            EmpData.EditIndex = -1;
-            EmpData.DataBind();
+            int index = Convert.ToInt32(e.RowIndex);
+            List<Employee> newdata = Session["data"] as List<Employee>;
+            newdata.RemoveAt(15*Convert.ToInt32(Session["newpage"])+index);
+            Session["data"] = newdata;
+            BindGrid();
         }
 
         protected void Search_Click(object sender, EventArgs e)
         {
 
         }
+
+       
     }
 }

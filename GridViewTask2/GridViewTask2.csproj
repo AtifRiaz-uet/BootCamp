@@ -73,6 +73,7 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employ.cs" />
     <Compile Include="employee.aspx.cs">
       <DependentUpon>employee.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
