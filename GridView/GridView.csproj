@@ -80,6 +80,7 @@
     <Compile Include="stdgrid.aspx.designer.cs">
       <DependentUpon>stdgrid.aspx</DependentUpon>
     </Compile>
+    <Compile Include="student.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

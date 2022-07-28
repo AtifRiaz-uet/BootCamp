@@ -10,6 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="center">
+           <!--Making GridView Controller with ID StdGrid-->
             <asp:GridView runat="server" ID="StdGrid" HeaderStyle-BackColor="Tomato" BorderColor="MidnightBlue" ></asp:GridView>
         </div>
     </form>
