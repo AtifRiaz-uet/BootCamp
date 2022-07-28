@@ -16,7 +16,8 @@
             <hr />
             <asp:GridView runat="server" ID="EmpData" AllowPaging="true" PageSize="15" OnPageIndexChanging="EmpData_PageIndexChanging"
                  CellPadding="5" CellSpacing="50" BorderColor="BlueViolet" GridLines="Horizontal" Font-Size="Larger" 
-                 AutoGenerateColumns="false" OnRowEditing="EmpData_RowEditing" OnRowDeleting="EmpData_RowDeleting">
+                 AutoGenerateColumns="false" OnRowEditing="EmpData_RowEditing" OnRowDeleting="EmpData_RowDeleting" OnRowUpdating="EmpData_RowUpdating"
+                 OnRowCancelingEdit="EmpData_RowCancelingEdit">
                 <AlternatingRowStyle BackColor="#F7F7F7" />
 
                 <HeaderStyle Width="25%" />
@@ -42,16 +43,41 @@
                 <SortedDescendingHeaderStyle BackColor="#3E3277" />
 
                 <Columns>
+                    <asp:TemplateField HeaderText="ID">
+                        <ItemTemplate>
+                            <asp:Label runat="server" Text='<%#Eval("Id") %>' ID="id_txt" ></asp:Label>
+                        </ItemTemplate>
+                        <EditItemTemplate>  
+                            <asp:TextBox ID="txt_Id" runat="server" Text='<%#Eval("Id") %>'></asp:TextBox>  
+                        </EditItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Name">
+                        <ItemTemplate>
+                            <asp:Label runat="server" Text='<%#Eval("Name") %>' ID="name_txt" ></asp:Label>
+                        </ItemTemplate>
+                        <EditItemTemplate>  
+                            <asp:TextBox ID="txt_Name" runat="server" Text='<%#Eval("Name") %>'></asp:TextBox>  
+                        </EditItemTemplate> 
+                    </asp:TemplateField>
+
                     <asp:HyperLinkField 
                         DataNavigateUrlFields="Name,Id,Role,Salary" 
                         DataNavigateUrlFormatString="employee.aspx?name={0}&id={1}&role={2}&salary={3}"
-                        DataTextField="Name" 
-                        HeaderText="NAME" 
-                        ItemStyle-Width="40%"
+                        Text="Select"
+                        HeaderText="Selection" 
+                        ItemStyle-Width="15%"
                         ItemStyle-Wrap="true" ItemStyle-Font-Underline="false"
                         />
-                    <asp:CommandField HeaderText="Edit" ShowEditButton="true" ItemStyle-Width="15%"/>
-                    <asp:CommandField HeaderText="Delete" ShowDeleteButton="true" ItemStyle-Width="15%"/>
+                    <asp:TemplateField>  
+                    <ItemTemplate>  
+                        <asp:Button ID="btn_Edit" runat="server" Text="Edit" CommandName="Edit" />  
+                    </ItemTemplate>  
+                    <EditItemTemplate>  
+                        <asp:Button ID="btn_Update" runat="server" Text="Update" CommandName="Update"/>  
+                        <asp:Button ID="btn_Cancel" runat="server" Text="Cancel" CommandName="Cancel"/>  
+                    </EditItemTemplate>  
+                </asp:TemplateField> 
                         
                 </Columns>
 
