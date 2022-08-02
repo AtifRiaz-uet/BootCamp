@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GridViewTask2")]
+[assembly: AssemblyTitle("WebProject")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GridViewTask2")]
+[assembly: AssemblyProduct("WebProject")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f816e0f2-d087-4550-8f81-cbbc6db951b1")]
+[assembly: Guid("4013d4b3-6dd4-46a6-99c0-37467520d8f5")]
 
 // Version information for an assembly consists of the following four values:
 //
