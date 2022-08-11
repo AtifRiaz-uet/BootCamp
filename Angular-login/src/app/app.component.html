@@ -1,0 +1,6 @@
+<h1>App Component</h1>
+<button *ngIf="login" (click)="clickEvent()">Logout</button>
+<button *ngIf="!login" (click)="btnclicked()">LogIn</button>
+  <h2>{{msg}}</h2>
+
+<app-new [loggedin]="login"></app-new>
