@@ -1,25 +1,29 @@
-<div class="container-fluid">
-  <h1>Make To-do List form</h1>
-  <form #userlist="ngForm">
+es (19 sloc)  582 Bytes
 
+<div class="container-fluid">
+  <h1>Add in To-do List</h1>
+  <form >
     <div class="form-group">
       <label>Title</label>
-      <input type="text" [(ngModel)]="title" class="form-control" name="title">
+      <input type="text" class="form-control" [(ngModel)]="_title" name="title" >
     </div>
 
     <div class="form-group">
       <label>Description</label>
-      <textarea class="form-control" [(ngModel)]="description" rows="3" name="description"></textarea>
+      <textarea class="form-control" [(ngModel)]="_description" name="description" rows="3"></textarea>
     </div>
+    
   </form>
   <br>
+  <button class="btn btn-primary" (click)="submit()">Add on List</button>
 
-  <button class="btn btn-primary" (click)="submit()">Add in List</button>
+</div>
+<div *ngIf="">
 
-  <!-- {{ userlist.value | json}} -->
-
-  
-<app-todo [info]="infolist"></app-todo>
+</div>
+<hr>
+<!-- <app-detail [getinfolist]="info_list"></app-detail> -->
+<app-todo [getinfolist]="info_list"></app-todo>
 
 
 

@@ -1,9 +1,8 @@
-<h4>Child</h4>
+<h3>To-do List Component</h3>
 
-<ul>
-    <p *ngFor="let index of info">{{index}}</p>
+<ul> 
+    <li *ngFor="let person of getinfolist; let i = index">
+        <h6>   Title&nbsp;&nbsp;Description</h6>
+       {{ person.title }}&nbsp;&nbsp;{{person.desp}}
+    </li>
 </ul>
-
-
-
-

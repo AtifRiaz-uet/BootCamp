@@ -8,41 +8,27 @@ import { Todo } from './Model/Todo';
 })
 export class AppComponent {
 
-  title:string = '';
-  description:string = '';
+  _title:string='';
+  _description:string='';
 
+  // title!:string;
+  // description!:string;
+  info_dict!:{};
+  info_list:any[]=[];
 
-
-  // @Output() todolist = new EventEmitter<Todo>();
-  title_name!:string;
-  description_name!:string;
-  title_names = [''];
-  des_names = [''];
-  infolist!:Todo[]
-  // infodict!: {
-  //   [key: string]: string;
-  // };
-
-
-  submit(){
-    this.title_name=this.title
-    this.description_name=this.description;
-    // this.infodict={'name':this.title_name,'des':this.description_name};
-    this.infolist.push((this.title_name,this.description_name))
-    this.title='';
-    this.description='';
-
+  submit()
+  {
+    if (this._title !== '' && this._description !== '')
+    {
+      console.log("clicked");
+    this.info_dict={'title':this._title,'desp':this._description};
+    this.info_list.push(this.info_dict);
+    this._title='';
+    this._description='';
+    }
+    else{
+      alert("Something is Missing!")
+    }
+    
   }
-
-
-  // submit1()
-  // {
-  //   if (this.title != '' && this.description != '')
-  // {
-  //   var info:[string,string] = [this.title,this.description]
-  //   this.todolist.emit(info);
-  // }
-  // }
-
-  
 }

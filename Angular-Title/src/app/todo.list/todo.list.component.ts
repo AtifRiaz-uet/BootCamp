@@ -7,24 +7,11 @@ import { Todo } from '../Model/Todo';
   styleUrls: ['./todo.list.component.css']
 })
 export class TodoListComponent implements OnInit {
-  @Input()info!:Todo[];
+  @Input () getinfolist!:any[]
 
-
-  //  @Input()info!: {
-  //   [key: string]: string;
-  // };
-
-  
-
-
-
-  // getinfo(a:[string,string])
-  // {
-  //   this.infolist=a;
-  // }
+  constructor() { }
 
   ngOnInit(): void {
   }
-
 
 }
