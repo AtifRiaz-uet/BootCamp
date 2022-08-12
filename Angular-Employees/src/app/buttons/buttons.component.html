@@ -1,0 +1,19 @@
+<div (click)="previous()">
+    <button>Previous</button>
+</div>
+<div (click)="next()">
+    <button>Next</button>
+</div>
+
+<!-- <div *ngIf="empDetails !== undefined" >
+    <p>{{empDetails.employe_name}}</p>
+    <p>{{empDetails.employe_id}}</p>
+    <p>{{empDetails.employe_age}}</p>
+</div> -->
+
+
+
+
+<ul>
+    <li *ngFor="let employe of getemplist" style="cursor:pointer;">{{employe.employe_name}}</li>
+</ul>
