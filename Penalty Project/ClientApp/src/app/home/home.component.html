@@ -29,7 +29,7 @@
 
       </div>
 
-      <div *ngIf="((PenaltyForm)?.valid) && ((PenaltyForm.get('checkOut').value) > (PenaltyForm.get('checkIn').value))">
+      <div *ngIf="((PenaltyForm)?.valid) && ((PenaltyForm.get('checkOut').value) >= (PenaltyForm.get('checkIn').value))">
         <button type="submit" class="btn btn-primary">Calculate Penalty</button>
         
 
