@@ -19,20 +19,22 @@ namespace PenaltyProject.DataLayer
             conString = config.GetConnectionString("Connection");
         }
         
+        //This method will give away the list of countries Data
         public List<Country> GetCountries()
         {
-            List<Country> countriesList = new List<Country>();
-            SqlConnection con = new SqlConnection(conString);
+
+            List<Country> countriesList = new List<Country>();//Initializing
+            SqlConnection con = new SqlConnection(conString);//conString is given in appsettings.json file
             con.Open();
-            string query = "SELECT * FROM COUNTRYDATA";
+            string query = "SELECT * FROM COUNTRYDATA";//sql query to get all data
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
-            DataTable countriesTable = new DataTable();
+            DataTable countriesTable = new DataTable();//Initialing new DataTable to store Data
             sda.Fill(countriesTable);
 
 
             for (int index = 0; index < countriesTable.Rows.Count; index++)
             {
-                Country country = new Country
+                Country country = new Country             //Making new Object of Country and Passing Data
                 {
                     countryId = Convert.ToInt32(countriesTable.Rows[index]["CountryID"]),
                     countryName = countriesTable.Rows[index]["CountryName"].ToString(),

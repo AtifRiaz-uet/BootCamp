@@ -42,9 +42,9 @@ namespace PenaltyProject.Controllers
         }
         [Route("Post")]
         [HttpPost]
-        public List<double> Post([FromBody] datesModel dates)
+        public List<string> Post([FromBody] datesModel dates)
         {
-            List<double> daysPenalty = _penalty.GetDays(dates);
+            List<string> daysPenalty = _penalty.GetDays(dates);
             return daysPenalty;
         }
 

@@ -14,7 +14,7 @@ export class ConnectionService {
   gm$ = this._callforBtn.asObservable()
   
   
-  sendreq(dPlist:number[]){
+  sendreq(dPlist:string[]){
     this._callforBtn.next(dPlist);
   }
 
@@ -33,7 +33,7 @@ export class ConnectionService {
 
     
     
-    postDates(checkIn:Date,returnDate:Date,countryName:string):Observable<number[]>
+    postDates(checkIn:Date,returnDate:Date,countryName:string):Observable<string[]>
 
     {
       this.newDates={// creating new object of dateModel to send data
@@ -41,7 +41,7 @@ export class ConnectionService {
         checkOut:returnDate,
         countryName:countryName
       }
-      return this.http.post<number[]>(this._urlPost,this.newDates);
+      return this.http.post<string[]>(this._urlPost,this.newDates);
 
     }
 

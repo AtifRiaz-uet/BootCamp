@@ -11,6 +11,6 @@ namespace PenaltyProject.BusinessLayer
     public interface IPenaltyCalculator
     {
         public List<Country> GetCountries();
-        public List<double> GetDays(datesModel dates);
+        public List<string> GetDays(datesModel dates);
     }
 }

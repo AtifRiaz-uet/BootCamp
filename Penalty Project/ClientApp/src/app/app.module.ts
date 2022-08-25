@@ -27,7 +27,7 @@ import { DatePipe } from '@angular/common';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data/:days', component: FetchDataComponent },
+      { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
   providers: [DatePipe],

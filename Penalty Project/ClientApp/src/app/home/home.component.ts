@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
     countriesList: string[];
     PenaltyForm: FormGroup;
-    daysPenlaty:number[];
+    daysPenlaty:string[];
     cIN:Date;
     countryName:string;
     @Output() newdayPen = new EventEmitter<number[]>();
@@ -49,14 +49,12 @@ export class HomeComponent {
             if (this.cOU >= this.cIN)
             {
                 this.interactionService.postDates(this.cIN,this.cOU,this.countryName)
-                .pipe(map((dayP: number[]) => {
+                .pipe(map((dayP: string[]) => {
                     this.interactionService.sendreq(this.daysPenlaty = dayP);//sending daysandPenalty to service to get access on any other components
                 })
                 )
                 .subscribe();//posting checkin , checkoutout dates and country to api and in return getting working days and penalty price
                 this.trigger=true;
-
-                this.router.navigate(['fetch-data',this.daysPenlaty]);
                 console.log("Form Submitted");
 
             }
