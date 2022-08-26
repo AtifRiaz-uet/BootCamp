@@ -31,8 +31,13 @@
         </div>
 
       </div>
+<<<<<<< HEAD
       <!-- It will show button when form is Valid -->
       <div *ngIf="((PenaltyForm)?.valid) && ((PenaltyForm.get('checkOut').value) > (PenaltyForm.get('checkIn').value))">
+=======
+
+      <div *ngIf="((PenaltyForm)?.valid) && ((PenaltyForm.get('checkOut').value) >= (PenaltyForm.get('checkIn').value))">
+>>>>>>> 1d9721d5784e11f1c40e5b25a0ba66f28494d4c0
         <button type="submit" class="btn btn-primary">Calculate Penalty</button>
         
 
